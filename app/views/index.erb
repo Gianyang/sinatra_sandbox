@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>Hello, world!</p>
+
+  <table style= "border:1px dotted;">
+    <tr>
+      <th>File Description</th>
+      <th>File Location</th>
+    </tr>
+    <tr>
+      <td>This view file</td>
+      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The layout file</td>
+      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+    <tr>
+      <td>The current controller</td>
+      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
+    </tr>
+  </table>
+</div>
+
+
+<form action ="/cool_url" method ="post">
+<input type="text" name="try[title]">
+<input type="text" name="try[price]">
+<textarea name="try[description]"></textarea>
+<input type="submit" value="Submit!">
+</form>
+
+<form action="/cool_url" method="post">
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname"><br>
+Email: <input type="text" name="email"><br>
+Phone: <input type="text" name="phone"><br>
+Birthday <input type="text" name="firstname"><br>
+ <select name ="drinks">
+  <option value = "milk">Milk</option>
+  <option value ="coffee">Coffee</option>
+  <option value = "tea">Tea</option>
+</select>
+
+<div align="left"><br>
+<input type="checkbox" name="option1" value="Milk"> Milk<br>
+<input type="checkbox" name="option2" value="Butter" checked> Butter<br>
+<input type="checkbox" name="option3" value="Cheese"> Cheese<br>
+<br>
+</div>
+
+<div align="center"><br>
+<input type="radio" name="group1" value="Eat"> Eat<br>
+<input type="radio" name="group1" value="Sleep" checked> Sleep<br>
+<input type="radio" name="group1" value="Rave"> Rave
+<hr>
+<input type="radio" name="group2" value="Repeat"> Repeat<br>
+<input type="radio" name="group2" value="Beer"> Beer<br>
+<input type="radio" name="group2" value="Wine" checked> Wine<br>
+</div>
+
+<input type="submit" value="Submit!">
+</form>
+
+
+
+
+
